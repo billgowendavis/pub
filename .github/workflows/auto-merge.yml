@@ -1,0 +1,14 @@
+name: Auto Merge
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Test deploy'
+        required: true
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "Test" >> test.txt && git add . && git push origin main
