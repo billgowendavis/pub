@@ -17,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: |
-        echo "${{ inputs.name }}" >> test.txt
+        echo "Test 123" >> test.txt
         git add .
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
