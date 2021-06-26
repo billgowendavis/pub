@@ -7,6 +7,10 @@ on:
         description: 'Test deploy'
         required: true
 
+concurrency: 
+  group: 'auto-merge'
+  cancel-in-progress: true
+
 jobs:
   merge:
     runs-on: ubuntu-latest
